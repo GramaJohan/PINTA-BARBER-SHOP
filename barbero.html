@@ -16,12 +16,21 @@
       <img src="logo.png" alt="Pinta Barber Shop" class="logo-img small" />
       <div class="brand">
         <h1>Panel Barbero</h1>
-        <p class="subtitle">Jhon Reales</p>
+        <p class="subtitle" id="barberName">Cargando...</p>
       </div>
+      <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
     </div>
   </header>
 
   <main class="container">
+    <!-- Lista de citas del día -->
+    <section class="appointments-today">
+      <div class="card">
+        <h2 style="margin-bottom:20px">📅 Citas agendadas hoy</h2>
+        <div id="todayAppointments"></div>
+      </div>
+    </section>
+
     <section class="barber-panel">
       <div class="panel-left">
         <div class="card">

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Acceso Panel Barbero - Pinta Barber Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <div class="header-inner">
+      <img src="logo.png" alt="Pinta Barber Shop" class="logo-img small" />
+      <div class="brand">
+        <h1>Panel Barbero</h1>
+        <p class="subtitle">Acceso restringido</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="login-container">
+      <div class="login-card">
+        <div class="login-icon">🔒</div>
+        <h2>Iniciar Sesión</h2>
+        <p class="login-subtitle">Acceso solo para barberos autorizados</p>
+
+        <form id="loginForm">
+          <label>Usuario</label>
+          <input id="username" type="text" placeholder="Tu nombre de usuario" autocomplete="username" required />
+
+          <label>Contraseña</label>
+          <input id="password" type="password" placeholder="Tu contraseña" autocomplete="current-password" required />
+
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:20px">
+            Ingresar al Panel
+          </button>
+
+          <div id="loginMsg" class="msg"></div>
+        </form>
+
+        <div class="login-help">
+          <p>¿Olvidaste tu contraseña? Contacta al administrador</p>
+          <a href="index.html" class="back-link">← Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© Pinta Barber Shop</div>
+  </footer>
+
+  <script>
+    // Usuarios permitidos (en producción esto debería estar en un servidor)
+    const USERS = {
+      'jhon': { password: 'jhon2024', name: 'Jhon Reales' },
+      'sebastian': { password: 'sebastian2024', name: 'Sebastián C' },
+      'admin': { password: 'pinta2024', name: 'Administrador' }
+    };
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const username = document.getElementById('username').value.toLowerCase().trim();
+      const password = document.getElementById('password').value;
+      const msgEl = document.getElementById('loginMsg');
+
+      if (USERS[username] && USERS[username].password === password) {
+        // Login exitoso
+        sessionStorage.setItem('barber_auth', JSON.stringify({
+          username: username,
+          name: USERS[username].name,
+          loginTime: new Date().toISOString()
+        }));
+
+        msgEl.style.color = '#059669';
+        msgEl.style.background = '#d1fae5';
+        msgEl.textContent = '✓ Acceso concedido. Redirigiendo...';
+
+        setTimeout(() => {
+          window.location.href = 'barbero.html';
+        }, 1000);
+      } else {
+        // Login fallido
+        msgEl.style.color = '#dc2626';
+        msgEl.style.background = '#fee2e2';
+        msgEl.textContent = '✗ Usuario o contraseña incorrectos';
+        
+        // Limpiar campos
+        document.getElementById('password').value = '';
+      }
+    });
+  </script>
+</body>
+</html>

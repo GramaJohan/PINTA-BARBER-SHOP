@@ -1,4 +1,4 @@
-<!-- index.html -->
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -42,7 +42,7 @@
             </svg>
             Reservar cita
           </a>
-          <a class="btn btn-outline" href="barbero.html">Panel Barbero</a>
+          <a class="btn btn-outline" href="login.html">Panel Barbero</a>
         </div>
 
         <div class="info-pills">
@@ -58,7 +58,7 @@
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
-            <span>Lun - Dom: 08:00 - 20:00</span>
+            <span>Lun - Dom: 10:00 - 20:00</span>
           </div>
         </div>
       </div>
@@ -119,17 +119,17 @@
         </article>
 
         <article class="card">
-          <div class="service-icon">🧔</div>
-          <div class="card-title">Barba</div>
-          <div class="card-meta">30 min · $7.000</div>
-          <button class="btn-small" onclick="location.href='cliente.html?service=Barba'">Reservar</button>
+          <div class="service-icon">✨</div>
+          <div class="card-title">Corte + Barba + Cejas</div>
+          <div class="card-meta">60 min · $20.000</div>
+          <button class="btn-small" onclick="location.href='cliente.html?service=Corte%20%2B%20Barba%20%2B%20Cejas'">Reservar</button>
         </article>
 
         <article class="card">
-          <div class="service-icon">✨</div>
-          <div class="card-title">Corte + Barba + Cejas</div>
-          <div class="card-meta">70 min · $20.000</div>
-          <button class="btn-small" onclick="location.href='cliente.html?service=Corte%20%2B%20Barba%20%2B%20Cejas'">Reservar</button>
+          <div class="service-icon">🧔</div>
+          <div class="card-title">Barba</div>
+          <div class="card-meta">20 min · $7.000</div>
+          <button class="btn-small" onclick="location.href='cliente.html?service=Barba'">Reservar</button>
         </article>
 
         <article class="card">
@@ -141,14 +141,69 @@
       </div>
     </section>
 
-    <!-- Servicios adicionales -->
+    <!-- Sección de Minoxidil -->
+    <section class="minoxidil-section">
+      <h3>Productos Minoxidil</h3>
+      <p class="section-subtitle">Distribuidor autorizado - Tratamiento para crecimiento capilar</p>
+      <div class="minoxidil-grid">
+        <article class="minoxidil-card">
+          <!-- 🔸 Coloca aquí la imagen del producto: minoxidil-18.jpg -->
+          <div class="product-image-placeholder">
+            <img src="minoxidil-18.jpg" alt="Minoxidil Nextgen 18%" class="product-image" onerror="this.parentElement.innerHTML='<div class=\'placeholder-text\'>Imagen:<br>minoxidil-18.jpg</div>'"/>
+          </div>
+          <div class="product-info">
+            <h4>Minoxidil Nextgen 18%</h4>
+            <p class="product-price">COP $90.000</p>
+            <p class="product-desc">Concentración máxima para resultados óptimos</p>
+            <a href="https://wa.me/573112195634?text=Hola,%20quiero%20información%20sobre%20Minoxidil%20Nextgen%2018%" target="_blank" class="btn-small">Consultar</a>
+          </div>
+        </article>
+
+        <article class="minoxidil-card">
+          <!-- 🔸 Coloca aquí la imagen: minoxidil-15.jpg -->
+          <div class="product-image-placeholder">
+            <img src="minoxidil-15.jpg" alt="Minoxidil Nextgen 15%" class="product-image" onerror="this.parentElement.innerHTML='<div class=\'placeholder-text\'>Imagen:<br>minoxidil-15.jpg</div>'"/>
+          </div>
+          <div class="product-info">
+            <h4>Minoxidil Nextgen 15%</h4>
+            <p class="product-price">COP $80.000</p>
+            <p class="product-desc">Alta concentración, excelentes resultados</p>
+            <a href="https://wa.me/573112195634?text=Hola,%20quiero%20información%20sobre%20Minoxidil%20Nextgen%2015%" target="_blank" class="btn-small">Consultar</a>
+          </div>
+        </article>
+
+        <article class="minoxidil-card">
+          <!-- 🔸 Coloca aquí la imagen: minoxidil-12.jpg -->
+          <div class="product-image-placeholder">
+            <img src="minoxidil-12.jpg" alt="Minoxidil Nextgen 12%" class="product-image" onerror="this.parentElement.innerHTML='<div class=\'placeholder-text\'>Imagen:<br>minoxidil-12.jpg</div>'"/>
+          </div>
+          <div class="product-info">
+            <h4>Minoxidil Nextgen 12%</h4>
+            <p class="product-price">COP $70.000</p>
+            <p class="product-desc">Concentración intermedia, efectivo y seguro</p>
+            <a href="https://wa.me/573112195634?text=Hola,%20quiero%20información%20sobre%20Minoxidil%20Nextgen%2012%" target="_blank" class="btn-small">Consultar</a>
+          </div>
+        </article>
+
+        <article class="minoxidil-card">
+          <!-- 🔸 Coloca aquí la imagen: minoxidil-kirkland.jpg -->
+          <div class="product-image-placeholder">
+            <img src="minoxidil-kirkland.jpg" alt="Minoxidil Kirkland 5%" class="product-image" onerror="this.parentElement.innerHTML='<div class=\'placeholder-text\'>Imagen:<br>minoxidil-kirkland.jpg</div>'"/>
+          </div>
+          <div class="product-info">
+            <h4>Minoxidil Kirkland 5%</h4>
+            <p class="product-price">COP $35.000</p>
+            <p class="product-desc">Venta por unidad y por caja - Marca reconocida</p>
+            <a href="https://wa.me/573112195634?text=Hola,%20quiero%20información%20sobre%20Minoxidil%20Kirkland%205%" target="_blank" class="btn-small">Consultar</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+<!-- Servicios adicionales -->
     <section class="amenities-section">
       <h3>Servicios y comodidades</h3>
       <div class="amenities-grid">
-        <div class="amenity-item">
-          <span class="amenity-icon">💊</span>
-          <span class="amenity-text">Inicio de Minoxidil</span>
-        </div>
         <div class="amenity-item">
           <span class="amenity-icon">📶</span>
           <span class="amenity-text">WiFi gratis</span>
@@ -162,9 +217,7 @@
           <span class="amenity-text">Nequi / Bre-B / Efectivo</span>
         </div>
       </div>
-    </section>
-  </main>
-
+    </section><!-- index.html -->
   <footer class="site-footer">
     <div class="footer-content">
       <div>© Pinta Barber Shop · CL. 35 # 49A-10 · Barrancabermeja</div>

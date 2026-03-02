@@ -1,4 +1,240 @@
-/* style.css - Diseño modernizado */
+/* APPOINTMENTS TODAY */
+.appointments-today {
+  margin-bottom: 32px;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.appointment-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 16px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.appointment-item:hover {
+  background: #fff;
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.appointment-time {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  padding: 8px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.appointment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.appointment-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #111;
+}
+
+.appointment-service {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.appointment-phone {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.appointment-barber {
+  background: var(--accent);
+  color: #111;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}/* LOGIN PAGE */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.login-card {
+  background: #fff;
+  padding: 48px 40px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.login-card h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #111;
+}
+
+.login-subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.login-card form {
+  text-align: left;
+}
+
+.login-help {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.login-help p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.back-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--accent-dark);
+}/* MINOXIDIL SECTION */
+.minoxidil-section {
+  margin: 56px 0;
+  padding: 56px 48px;
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+}
+
+.minoxidil-section h3 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #111;
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.minoxidil-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.minoxidil-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.minoxidil-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+}
+
+.product-image-placeholder {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.minoxidil-card:hover .product-image {
+  transform: scale(1.1);
+}
+
+.placeholder-text {
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #111;
+  font-weight: 600;
+}
+
+.product-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 8px 0;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.product-info .btn-small {
+  width: 100%;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}/* style.css - Diseño modernizado */
 :root{
   --bg: #0a0a0a;
   --card: #ffffff;
@@ -39,6 +275,34 @@ body {
 
 .site-header.small {
   padding: 16px 0;
+}
+
+.header-inner {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 24px;
+  position: relative;
+}
+
+.btn-logout {
+  margin-left: auto;
+  padding: 8px 20px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background: #fca5a5;
+  transform: translateY(-2px);
 }
 
 .header-inner {
@@ -91,7 +355,7 @@ body {
 /* CONTAINER */
 .container {
   max-width: var(--maxwidth);
-  margin: 32px auto;
+  margin: 40px auto;
   padding: 0 24px;
 }
 
@@ -313,14 +577,15 @@ body {
 
 /* SECCIÓN BARBEROS */
 .barbers-section {
-  margin: 48px 0;
+  margin: 56px 0;
 }
 
 .barbers-section h3 {
-  font-size: 28px;
-  margin-bottom: 24px;
+  font-size: 32px;
+  margin-bottom: 28px;
   color: #111;
   font-weight: 700;
+  text-align: center;
 }
 
 .barbers-grid {
@@ -385,14 +650,15 @@ body {
 
 /* SERVICIOS */
 .services {
-  margin-top: 48px;
+  margin: 56px 0;
 }
 
 .services h3 {
-  margin-bottom: 24px;
-  font-size: 28px;
+  margin-bottom: 28px;
+  font-size: 32px;
   color: #111;
   font-weight: 700;
+  text-align: center;
 }
 
 .cards {
@@ -403,13 +669,17 @@ body {
 
 .card {
   background: #fff;
-  padding: 32px 24px;
+  padding: 36px 24px;
   border-radius: 20px;
   border: 1px solid var(--border);
   position: relative;
   transition: all 0.3s ease;
   box-shadow: 0 4px 16px var(--shadow);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
 }
 
 .card:hover {
@@ -425,15 +695,16 @@ body {
 
 .card-title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 19px;
   margin-bottom: 8px;
   color: #111;
 }
 
 .card-meta {
   color: var(--muted);
-  margin: 12px 0 20px;
-  font-size: 14px;
+  margin: 12px 0 24px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 /* BOOKING LAYOUT */
@@ -586,14 +857,39 @@ select:focus {
   font-size: 24px;
 }
 
+/* AMENITIES COMPACT - Versión pequeña al final */
+.amenities-compact {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 32px 24px;
+  margin: 48px 0 0;
+  border-top: 1px solid #e5e7eb;
+  background: #fafafa;
+  border-radius: 16px 16px 0 0;
+  flex-wrap: wrap;
+}
+
+.amenity-compact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.amenity-compact-icon {
+  font-size: 18px;
+}
+
 /* FOOTER */
 .site-footer {
   max-width: var(--maxwidth);
-  margin: 48px auto 0;
-  padding: 32px 24px;
+  margin: 0 auto;
+  padding: 40px 24px 32px;
   border-top: 1px solid var(--border);
   background: #fff;
-  border-radius: 20px 20px 0 0;
 }
 
 .footer-content {
@@ -733,6 +1029,29 @@ select:focus {
     grid-template-columns: 1fr;
   }
 
+  .amenities-compact {
+    gap: 24px;
+    padding: 24px 16px;
+  }
+
+  .minoxidil-section {
+    padding: 32px 24px;
+    margin: 40px 0;
+  }
+
+  .minoxidil-section h3 {
+    font-size: 26px;
+  }
+
+  .barbers-section h3,
+  .services h3 {
+    font-size: 26px;
+  }
+
+  .minoxidil-grid {
+    grid-template-columns: 1fr;
+  }
+
   .social-links {
     flex-direction: column;
     gap: 12px;
@@ -759,6 +1078,31 @@ select:focus {
 
   .hero-image-wrapper {
     min-height: 280px;
+  }
+
+  .amenity-compact-item {
+    font-size: 13px;
+  }
+
+  .amenity-compact-icon {
+    font-size: 16px;
+  }
+
+  .minoxidil-section {
+    padding: 28px 20px;
+  }
+
+  .minoxidil-section h3 {
+    font-size: 22px;
+  }
+
+  .section-subtitle {
+    font-size: 14px;
+  }
+
+  .barbers-section h3,
+  .services h3 {
+    font-size: 22px;
   }
 
   .cta-group {
